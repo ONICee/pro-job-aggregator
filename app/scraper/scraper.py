@@ -59,7 +59,8 @@ def get_remotive_jobs():
                 'title': job['title'],
                 'company': job['company_name'],
                 'source': 'Remotive',
-                'url': job['url']
+                'url': job['url'],
+                'description': job.get('description', '')  # Add description
             })
     except Exception as e:
         print(f"[Remotive] Error: {e}")
